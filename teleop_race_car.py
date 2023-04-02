@@ -6,7 +6,7 @@ from geometry_msgs.msg import Twist
 class TeleopCar:
     def __init__(self):
         rospy.init_node('teleop_car')
-        self.pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
+        self.pub = rospy.Publisher('~/cmd/cmd_vel', Twist, queue_size=1)
         self.move_bindings = {
             'w': (1, 0, 0, 1),
             'a': (1, 0, 0, -1),
