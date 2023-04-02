@@ -5,7 +5,7 @@ from geometry_msgs.msg import Twist
 
 class TeleopRaceCar:
     def __init__(self):
-        self.cmd_vel_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
+        self.cmd_vel_pub = rospy.Publisher('/cmd/cmd_vel', Twist, queue_size=1)
         self.speed = 0.0
         self.turn = 0.0
 
